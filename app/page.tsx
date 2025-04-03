@@ -73,6 +73,7 @@ import { useVideoAddHelper } from "../components/editor/helper/video_add_helper"
 // import SaveDraft from "../components/left_side_menu/saveDraft";
 import { FaMagnifyingGlassMinus, FaMagnifyingGlassPlus } from "react-icons/fa6";
 import { FaAngleLeft, FaTimes } from "react-icons/fa";
+import Library from "../components/left_side_menu/library";
 
 
 const Home: NextPage = () => {
@@ -122,6 +123,7 @@ const Home: NextPage = () => {
     | "render_video_list"
     | "heygen_video_list"
     | "SaveDraft"
+    | "Library"
 
   >("upload");
 
@@ -543,6 +545,17 @@ const Home: NextPage = () => {
               </button>
             </div>
 
+            <div className="sidebar-items">
+              <button
+                onClick={() => setView("Library")}
+                className="items-link"
+              >
+                <BsMusicNoteList className="text-white" />
+                <span className="item-text">Library</span>
+              </button>
+            </div>
+
+
           </div>
         </div>
 
@@ -663,6 +676,7 @@ const Home: NextPage = () => {
               {view === "render_video_list" && (<RenderVideolist />)}
               {view === "audio" && (<Audio />)}
               {view === "audio_edit_tool" && (<AudioEditTool />)}
+              {view === "Library" && (<Library />)}
             </div>
 
             {/* editor view (canwas ,button bar ,timeline) start */}
