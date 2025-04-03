@@ -1,5 +1,7 @@
 "use client";
 import { Player, PlayerRef } from "@remotion/player";
+import Image from 'next/image';
+
 import type { NextPage } from "next";
 import React, { useMemo, useRef, useState, useEffect, useCallback } from "react";
 import { Main } from "../remotion/MyComp/Main";
@@ -40,24 +42,24 @@ import {
 import { TimeDisplay } from "../components/editor/playercontroll/TimeDisplay";
 // import { VolumeSlider } from "../components/editor/playercontroll/VolumeSlider";
 import { PlayPauseButton } from "../components/editor/playercontroll/PlayPauseButton";
-// import { MdPermMedia } from "react-icons/md";
+import { MdPermMedia } from "react-icons/md";
 import UndoRedo from "../components/editor/playercontroll/undoRedp";
 
-// import { FaVideo, FaImage } from "react-icons/fa";
+import { FaVideo, FaImage } from "react-icons/fa";
 // import {
 //   PiMagnifyingGlassMinusThin,
 //   PiMagnifyingGlassPlusThin,
 // } from "react-icons/pi";
-// import {
-//   BiUndo, BiRedo,
-//   //  BiSolidCloudUpload,
-//   // BiText
-// } from "react-icons/bi";
-// import { BsMusicNoteList } from "react-icons/bs";
-// import {
-//   //  MdInterests,
-//   MdTune
-// } from "react-icons/md";
+import {
+  // BiUndo, BiRedo,
+  BiSolidCloudUpload,
+  BiText
+} from "react-icons/bi";
+import { BsMusicNoteList } from "react-icons/bs";
+import {
+  MdInterests,
+  MdTune
+} from "react-icons/md";
 // import { ActionCreators } from "redux-undo";
 import EmojiEditTool from "../components/editor/tool/emoji_edit_tool";
 import { updateProjectSettings } from "./store/project_settingsSlice ";
@@ -70,7 +72,7 @@ import { useTemplateSet } from "../components/editor/tool/template_set_fun";
 import { useVideoAddHelper } from "../components/editor/helper/video_add_helper";
 // import SaveDraft from "../components/left_side_menu/saveDraft";
 import { FaMagnifyingGlassMinus, FaMagnifyingGlassPlus } from "react-icons/fa6";
-import { FaTimes } from "react-icons/fa";
+import { FaAngleLeft, FaTimes } from "react-icons/fa";
 
 
 const Home: NextPage = () => {
@@ -395,6 +397,8 @@ const Home: NextPage = () => {
   // }
 
   const [isOpen, setexportOpenpopup] = useState(false);
+  const [setupPopup, setSetupPopup] = useState(false);
+
 
   const isMiddleSectionVisible = useSelector(
     (state: RootState) => state.editorTool.MiddleSectionVisible
@@ -445,7 +449,7 @@ const Home: NextPage = () => {
 
         {/* side nav  */}
         <div className="sidebar-menu">
-           <div className="sidebar-head flex items-center gap-2">
+          <div className="sidebar-head flex items-center gap-2">
             <div className="back-btn text-white">
               <FaAngleLeft />
             </div>
@@ -539,8 +543,8 @@ const Home: NextPage = () => {
               </button>
             </div>
 
-          </div> 
-        </div> 
+          </div>
+        </div>
 
 
         {/* main pgae start  */}
@@ -548,18 +552,46 @@ const Home: NextPage = () => {
 
           {/* header start */}
           <div className="theme-header">
+
+            <div className="left-content flex items-center gap-2">
+
+              <div
+                className="w-6 h-6 border border-white"
+                style={{ backgroundColor: "#fff" }}
+              >
+
+              </div>
+              <div className="text-white">16:6</div>
+              <button onClick={() => setSetupPopup(prev => !prev)}>
+                {setupPopup ? "v" : "^"}
+              </button>
+            </div>
+
+            {setupPopup && (
+              <>
+                {/* Popup Box */}
+                <div
+                  className="fixed bg-white p-6 rounded-lg shadow-lg w-96 z-50 kd-export-modal"
+                  style={{
+                    top: "70px",
+                    left: "10px",
+                  }}
+                >
+                  <div>popup</div>
+
+
+
+                </div>
+              </>
+            )}
+
+
+
+
             <div className="mid-content flex items-center text-white gap-2">
               <span>Untitled Video</span>
               < BsPencilFill className="text-white" />
             </div>
-
-            {/* <button
-              onClick={() => setIsMiddleSectionVisible(!isMiddleSectionVisible)}
-              className="kd-primary-btn"
-            >
-              hide show
-            </button> */}
-
 
 
 
