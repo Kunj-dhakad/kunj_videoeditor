@@ -1,0 +1,18 @@
+{
+  "id": "2",
+  "domain_url":"www.aivideocreatorfx.in",
+  "projectId": "projectB",
+  "headingTextColor": "#F7FAFC",
+  "subHeadingTextColor": "#CBD5E0",
+  "BgColor": "#E53E3E",
+  "buttonBorderColor": "#E53E3E",
+  "buttonTextColor": "#FFFFFF",
+  "buttonBorderRadius": "8px",
+  "buttonHoverColor": "#9B2C2C",
+  "buttonHoverStyles": {
+    "buttonBgColor": "#9B2C2C",
+    "buttonBorderColor": "#C53030",
+    "buttonTextColor": "#E2E8F0",
+    "buttonBorderRadius": "8px"
+  }
+}
