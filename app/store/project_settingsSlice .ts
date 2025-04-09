@@ -11,12 +11,12 @@ interface ProjecSettingtData {
 }
 
 const initialSettingsState: ProjecSettingtData = {
-  action: "",
-  id: "",
-  access_token: "",
-  project_id: "",
-  project_name:"",
-  api_url: "",
+  action: "sendProjectInfo",
+  id: "1",
+  access_token: "bzoNSJpnCnEVTo6f2fpuZDkvYVEzdkR0T2pVWGFhSVl0UU9VTS9wSSt3aWhKMVVOOXVONmVKbHpTZFE9",
+  project_id: "project_aiappsempire",
+  project_name:"AI Tube star",
+  api_url: "https://www.aitubestar.com/",
 };
 
 const settingsSlice = createSlice({

@@ -492,33 +492,25 @@ const Home: NextPage = () => {
           <div className="sidebar-items-list">
             <div className="sidebar-items">
               <button
-                onClick={() => setView("menu")}
-                className="items-link"
-              >
-                <MdTune className="" style={{ color: "white" }} />
-                <span className="item-text">Setup</span>
-              </button>
-            </div>
-
-            <div className="sidebar-items">
-              <button
-                onClick={() => setView("template")}
-                className="items-link"
-              >
-                <MdPermMedia className="text-white" />
-                <span className="item-text">Media</span>
-              </button>
-            </div>
-
-            <div className="sidebar-items">
-              <button
                 onClick={() => setView("upload")}
                 className="items-link"
               >
-                <BiSolidCloudUpload className="text-white" />
-                <span className="item-text">Setup</span>
+                <MdTune className="" style={{ color: "white" }} />
+                <span className="item-text">upload</span>
               </button>
             </div>
+
+            <div className="sidebar-items">
+              <button
+                onClick={() => setView("heygen_video_list")}
+                className="items-link"
+              >
+                <MdPermMedia className="text-white" />
+                <span className="item-text">Avatar</span>
+              </button>
+            </div>
+
+          
             <div className="sidebar-items">
               <button
                 onClick={() => setView("text")}
@@ -531,43 +523,27 @@ const Home: NextPage = () => {
 
             <div className="sidebar-items">
               <button
-                onClick={() => setView("image")}
+                onClick={() => setView("template")}
                 className="items-link"
               >
-                <FaImage style={{ color: "white" }} />
-                <span className="item-text">Setup</span>
+                <BiText className="" style={{ color: "white" }} />
+                <span className="item-text">template</span>
               </button>
             </div>
 
-            <div className="sidebar-items">
-              <button
-                onClick={() => setView("video")}
-                className="items-link"
-              >
-                <FaVideo className="text-white" />
-                <span className="item-text">Setup</span>
-              </button>
-            </div>
 
             <div className="sidebar-items">
               <button
-                onClick={() => setView("emoji")}
+                onClick={() => setView("Library")}
                 className="items-link"
               >
-                <MdInterests className="text-white" />
-                <span className="item-text">Setup</span>
+                <BiText className="" style={{ color: "white" }} />
+                <span className="item-text">Library</span>
               </button>
             </div>
 
-            <div className="sidebar-items">
-              <button
-                onClick={() => setView("audio")}
-                className="items-link"
-              >
-                <BsMusicNoteList className="text-white" />
-                <span className="item-text">Setup</span>
-              </button>
-            </div>
+         
+
 
           </div> 
         </div> 
