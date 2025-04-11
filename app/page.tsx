@@ -564,7 +564,7 @@ const Home: NextPage = () => {
                   <input
                     value={draftName}
                     onChange={(e) => setDraftName(e.target.value)}
-                    className="bg-transparent border-b border-white outline-none text-white"
+                    className="kd-form-input kd-form-input-style-2"
                     autoFocus
                   />
                   <FaCheck
@@ -575,7 +575,7 @@ const Home: NextPage = () => {
                 </>
               ) : (
                 <>
-                  <span className="cursor-pointer">{saveDraftname || "Untitled"}</span>
+                  <span className="cursor-pointer">{saveDraftname || "Untitled Video"}</span>
                   <BsPencilFill
                     onClick={() => {
                       setDraftName(saveDraftname);

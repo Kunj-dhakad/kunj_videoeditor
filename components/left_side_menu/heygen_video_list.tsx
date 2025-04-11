@@ -1,3 +1,5 @@
+
+
 import { useEffect, useState } from "react";
 import Image from 'next/image';
 import { useDispatch, useSelector } from "react-redux";
@@ -156,38 +158,18 @@ const HeygenVideolist: React.FC = () => {
               <div className="loader text-slate-50">Loading...</div>
             </div>
           ) : videoData && videoData.length > 0 ? (
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2">
               {videoData.map((video, index) => {
                 const isRemoving = bgRemovingMap[video.id];
                 return (
-                  // <div key={index} className="image-box-wrapper">
-                  //   <button
-                  //     onClick={() => handleProcess(video.url, video.id)}
-                  //     disabled={isRemoving}
-                  //   >
-                  //     {isRemoving ? "Removing Background..." : "Remove Background"}
-                  //   </button>
 
-                  //   <Image
-                  //     src={video.thumbnail}
-                  //     width={300}
-                  //     height={300}
-                  //     quality={50}
-                  //     alt={`Video thumbnail for video ${index + 1}`}
-                  //     onClick={() =>
-                  //       add_video_clip(video.url, video.thumbnail, video.width, video.height, video.duration)
-                  //     }
-                  //     className="w-full h-auto cursor-pointer"
-                  //   />
-                  //   <div>{video.title}</div>
-                  // </div>
-                  <div>
+                  <div className="flex flex-col items-center h-full">
                     <div
                       key={index}
-                      className="relative group border rounded-lg overflow-hidden bg-[#1a1a1a] image-box-wrapper"
+                      className="relative group overflow-hidden h-full"
                     >
                       {/* IMAGE */}
-                      <div className="relative w-full ">
+                      <div className="relative w-full image-box-wrapper">
                         <Image
                           src={isRemoving ? "https://kdmeditor.s3.us-east-1.amazonaws.com/kd_videoeditor/files/image/removeBgLoder.png" : video.thumbnail}
                           width={300}
@@ -247,24 +229,27 @@ const HeygenVideolist: React.FC = () => {
               <div className="loader text-slate-50">Loading...</div>
             </div>
           ) : bgRemovedVideos && bgRemovedVideos.length > 0 ? (
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2">
               {bgRemovedVideos.map((video, index) => (
-                <div key={index} className="image-box-wrapper">
-                  <Image
-                    src={video.thumbnail}
-                    width={300}
-                    height={300}
-                    quality={50}
-                    alt={`Processed Video thumbnail ${index + 1}`}
-                    onClick={() =>
-                      add_video_clip(video.bg_remove_url, video.thumbnail, video.width, video.height, video.duration)
-                    }
-                    className="w-full h-auto cursor-pointer"
-                  />
-                    <div className="text-white text-sm p-2">{video.title}</div>
+                <div key={index} className="flex flex-col items-center h-full">
+                  <div className="image-box-wrapper">
+                    <Image
+                      src={video.thumbnail}
+                      width={300}
+                      height={300}
+                      quality={50}
+                      alt={`Processed Video thumbnail ${index + 1}`}
+                      onClick={() =>
+                        add_video_clip(video.bg_remove_url, video.thumbnail, video.width, video.height, video.duration)
+                      }
+                      className="w-full h-auto cursor-pointer"
+                    />
+
+                  </div>
+                  <div className="text-white text-sm p-2">{video.title}</div>
                 </div>
               ))}
-              
+
             </div>
           ) : (
             <div className="flex justify-center items-center h-64">

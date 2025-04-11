@@ -17,7 +17,8 @@ const nextConfig = {
       "cdn.aiappsempire.com",
       "www.aitubestar.com",
       "cdn.aitubestar.com",
-      "www.aivideocreatorfx.in"
+      "www.aivideocreatorfx.in",
+      "mahesh.aitubestar.com"
     ],
   },
   env: {

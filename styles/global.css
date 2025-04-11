@@ -1013,6 +1013,9 @@ textarea.kd-form-input {
 /* Library Assets Css End */
 
 /* .image-box-wrapper .kd-primary-btn */
+.image-box-wrapper {
+  height: 100%;
+}
 .image-box-wrapper .kd-primary-btn {
   white-space: nowrap;
   width: fit-content;
@@ -1024,5 +1027,25 @@ textarea.kd-form-input {
 }
 .image-box-wrapper .kd-primary-btn:last-child:hover {
   background: var(--kd-primary-btn-bg);
+}
+
+.kd-form-input.kd-form-input-style-2 {
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-bottom: 1px solid var(--kd-border-color);
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 14px;
+  color: var(--kd-white-color);
+  outline: unset;
+  box-shadow: unset;
+  overflow: auto;       
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+.kd-form-input::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 /* .image-box-wrapper .kd-primary-btn */
