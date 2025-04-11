@@ -51,12 +51,12 @@ import { FaVideo, FaImage, FaAngleLeft } from "react-icons/fa";
 // } from "react-icons/pi";
 import {
   // BiUndo, BiRedo,
-   BiSolidCloudUpload,
+  BiSolidCloudUpload,
   BiText
 } from "react-icons/bi";
 import { BsMusicNoteList } from "react-icons/bs";
 import {
-   MdInterests,
+  MdInterests,
   MdTune
 } from "react-icons/md";
 // import { ActionCreators } from "redux-undo";
@@ -475,7 +475,7 @@ const Home: NextPage = () => {
 
         {/* side nav  */}
         <div className="sidebar-menu">
-           <div className="sidebar-head flex items-center gap-2">
+          <div className="sidebar-head flex items-center gap-2">
             <div className="back-btn text-white">
               <FaAngleLeft />
             </div>
@@ -510,7 +510,7 @@ const Home: NextPage = () => {
               </button>
             </div>
 
-          
+
             <div className="sidebar-items">
               <button
                 onClick={() => setView("text")}
@@ -542,11 +542,11 @@ const Home: NextPage = () => {
               </button>
             </div>
 
-         
 
 
-          </div> 
-        </div> 
+
+          </div>
+        </div>
 
 
         {/* main pgae start  */}
@@ -577,8 +577,10 @@ const Home: NextPage = () => {
                 <>
                   <span className="cursor-pointer">{saveDraftname || "Untitled"}</span>
                   <BsPencilFill
-                    onClick={() => setIsEditing(true)}
-                    className="text-white cursor-pointer"
+                    onClick={() => {
+                      setDraftName(saveDraftname);
+                      setIsEditing(true);
+                    }} className="text-white cursor-pointer"
                     title="Edit"
                   />
                 </>
