@@ -1,5 +1,5 @@
 import { useEffect, useState, } from "react";
-import { FaArrowLeft } from "react-icons/fa";
+// import { FaArrowLeft } from "react-icons/fa";
 import Videolist from "./videolist";
 import Imagelist from "./imagelist";
 import AudioList from "./audiolist";
@@ -136,7 +136,7 @@ const Upload: React.FC = () => {
           <FaArrowLeft />
        </a> */}
         <button onClick={toolbarhide} className="toggle-icon">
-          <FaArrowLeft />
+          <img src="https://kdmeditor.s3.us-east-1.amazonaws.com/kd_videoeditor/files/image/collapse.svg" alt="Collapse Icon" />
         </button>
 
       </div>

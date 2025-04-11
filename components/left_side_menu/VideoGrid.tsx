@@ -6,7 +6,8 @@ import { getVideoMetadata } from "@remotion/media-utils";
 import Image from "next/image";
 import imageCompression from "browser-image-compression";
 import { RootState } from "../../app/store/store";
-import { FaAngleLeft, FaArrowLeft, FaArrowRight, FaSearch } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaSearch } from "react-icons/fa";
+import { FaAngleLeft, } from "react-icons/fa6";
 import { MiddleSectionVisibleaction, settoolbarview } from "../../app/store/editorSetting";
 
 const skey = process.env.KD_PEXEL_API_KEY;

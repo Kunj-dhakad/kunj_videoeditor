@@ -79,7 +79,7 @@ export const ContextMenu: React.FC<ContextMenuProps> = ({ Allclip }) => {
 
 
   return (
-    <div className="bg-white text-start  absolute border border-gray-300 rounded-md shadow-lg z-50 flex flex-col">
+    <div className="option-toolbar">
       {/* <button
         className="px-6 py-3 text-2xl text-gray-700 hover:bg-gray-200 focus:outline-none flex items-center space-x-3"
         onClick={onEdit}
@@ -88,17 +88,17 @@ export const ContextMenu: React.FC<ContextMenuProps> = ({ Allclip }) => {
       </button> */}
 
       <button
-        className="px-6 py-3 text-2xl text-gray-700 hover:bg-gray-200 focus:outline-none flex items-center space-x-3"
+        className="toolbar-box"
         onClick={onDuplicate}
       >
-        <IoDuplicateOutline className="text-5xl text-green-500" />
+        <IoDuplicateOutline  className="tool-icon" />
         {/* <span className="text-5xl">Duplicate</span> */}
       </button>
       <button
-        className="px-6 py-3 text-2xl text-gray-700 hover:bg-gray-200 focus:outline-none flex items-center space-x-3"
+        className="toolbar-box"
         onClick={onDelete}
       >
-        <MdDelete className="text-5xl text-red-500" />
+        <MdDelete className="tool-icon" />
         {/* <span className="text-5xl">Delete</span> */}
       </button>
     </div>
